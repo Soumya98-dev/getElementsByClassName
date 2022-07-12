@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <style>
+    html {
+      text-align: center;
+    }
+
+    body {
+      margin: 3rem auto;
+    }
+
+    h1 {
+      color: rgb(242, 14, 234);
+      padding-bottom: 1rem;
+    }
+
+    h2 {
+      padding-bottom: 1rem;
+    }
+
+    .green-button,
+    .blue-button,
+    .red-button,
+    .reset-button {
+      margin: 1rem 0;
+      background-color: black;
+      color: white;
+    }
+
+    button {
+      padding: 0.8rem;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      width: 500px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Test Yourself</h1>
+  <h2>getElementsByClassName()</h2>
+  <div class="buttons">
+    <button class="green-button undo" onclick="green()">Click to change this to green</button>
+    <button class="blue-button undo" onclick="blue()">Click to change this to blue</button>
+    <button class="red-button undo" onclick="red()">Click to change this to red</button>
+    <button class="reset-button undo" onclick="undo()">Undo</button>
+  </div>
+  <script>
+    //Green button
+    function green() {
+      let greenButton = document.getElementsByClassName('green-button');
+      for (let i = 0; i < greenButton.length; i++) {
+        greenButton[i].style.backgroundColor = 'green';
+      }
+    }
+    // BLUE BUTTON
+    function blue() {
+      let blueButton = document.getElementsByClassName('blue-button');
+      for (let i = 0; i < blueButton.length; i++) {
+        blueButton[i].style.backgroundColor = 'blue';
+      }
+    }
+    // RED BUTTON
+    function red() {
+      let redButton = document.getElementsByClassName('red-button');
+      for (let i = 0; i < redButton.length; i++) {
+        redButton[i].style.backgroundColor = 'red';
+      }
+    }
+    // UNDO BUTTON
+    function undo() {
+      let undoButton = document.getElementsByClassName('undo');
+      for (let i = 0; i < undoButton.length; i++) {
+        undoButton[i].style.backgroundColor = 'black';
+      }
+    }
+  </script>
+</body>
+
+</html>
